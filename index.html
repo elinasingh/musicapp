@@ -23,7 +23,7 @@
                 <div class="right floated user-name"> </div>
             </header>
             <section class="content">
-                <audio src="song5.mp3"></audio>
+                <audio src="song4.mp3"></audio>
                 <div class="list-headers">
         <div> Title </div> 
         <div> Artist </div>
@@ -45,6 +45,9 @@
 		<span class="song-name"> </span>
 		</div>
 		<div class="song" id="song4">
+		<span  class="song-name"> </span>
+		</div>
+		<div class="song" id="song5">
 		<span  class="song-name"> </span>
 		</div>
 		
@@ -122,14 +125,14 @@
 				updateCurrentTime();
 				},1000);
 				
-				 var songList = ['Choo Lo','Humma Song', 'Nashe Si Chadh Gayi', 'The Breakup Song'];
-                 var fileNames = ['song5.mp3','song2.mp3','song3.mp3','song4.mp3'];
+				 var songList = ['Humma Humma','Choo Lo','Cheap Thrills', 'Summer', 'Bhayank Atma'];
+                 var fileNames = ['song4.mp3','song5.mp3','song6.mp3','song7.mp3','song8.mp3'];
 				window.onload = function() {
 				$('#song1 .song-name').text(songList[0]);
 				$('#song2 .song-name').text(songList[1]);
 				$('#song3 .song-name').text(songList[2]);
 				$('#song4 .song-name').text(songList[3]);
-				
+				$('#song5 .song-name').text(songList[4]);
 				$('#song1').click(function() {
 				var audio = document.querySelector('audio');
 				var currentSong = audio.src;
@@ -186,6 +189,22 @@
 				else {
 				// console.log('Else statement executing');
 				audio.src = fileNames[3];
+				toggleSong();
+				}
+				});
+				
+								
+				$('#song5').click(function() {
+				var audio = document.querySelector('audio');
+				var currentSong = audio.src;
+				if(currentSong.search(fileNames[4]) != -1)
+				// console.log('If statement executing');
+				{
+				toggleSong();
+				}
+				else {
+				// console.log('Else statement executing');
+				audio.src = fileNames[4];
 				toggleSong();
 				}
 				});
