@@ -34,12 +34,12 @@
 			}
 			
 			
-			function addSongNameClickEvent(songName,position) {
+			function addSongNameClickEvent(songName,position) { //isse koi b song play pause kr skte or song jha se pause hoga bhi se play hoga
 			var id = '#song' + position;
 			$(id).click(function() {
 			var audio = document.querySelector('audio');
 			var currentSong = audio.src;
-			if(currentSong.search(songName) != -1)
+			if(currentSong.search(songName) != -1) 
 			{
 			toggleSong();
 			}
@@ -69,7 +69,7 @@
 				},1000);
 				
 				
-				 var songs = [{
+				 var songs = [{          //objects ka array
 					'name': 'Alone',
 					'artist': 'Marshmello',
 					'album': 'Apple Music',
@@ -92,7 +92,7 @@
 				},
 				{
 					'name': 'Summer',
-					'artist': 'Marsmello',
+					'artist': 'Marshmello',
 					'album': 'Joytime',
 					'duration': '1:45',
 					'fileName': 'song7.mp3'
@@ -103,10 +103,52 @@
 					'album': 'Raja Baja',
 					'duration': '3:29',
 					'fileName': 'song8.mp3'
+				},
+				{
+					'name': 'Let Me Love You',
+					'artist': 'DJ Snake Ft Justin Bieber',
+					'album': 'Let Me Love You',
+					'duration': '3:26',
+					'fileName': 'song9.mp3'
+				},
+				{
+					'name': 'Closer',
+					'artist': 'The Chainsmokers',
+					'album': 'Closer',
+					'duration': '4:21',
+					'fileName': 'song10.mp3'
+				},
+				{
+					'name': 'We Dont Talk Anymore',
+					'artist': 'Charlie Puth',
+					'album': 'Nine Track Mind',
+					'duration': '3:37',
+					'fileName': 'song11.mp3'
+				},
+				{
+					'name': 'I Got You',
+					'artist': 'Bebe Rexha',
+					'album': 'Echo',
+					'duration': '3:11',
+					'fileName': 'song12.mp3'
+				},
+				{
+					'name': 'Jogi',
+					'artist': 'Swastik The Band',
+					'album': 'The Album',
+					'duration': '6:12',
+					'fileName': 'song13.mp3'
+				},
+				{
+					'name': 'Yeh Zindagi Hai',
+					'artist': 'The Local Train',
+					'album': 'Aalas Ka Pedh',
+					'duration': '4:09',
+					'fileName': 'song14.mp3'
 				}]
 
 				
-				 for(var i =0; i < songs.length; i++) {
+				 for(var i =0; i < songs.length; i++) {            
 					 var obj = songs[i];
 						var name = '#song' + (i+1);
 						var song = $(name);
@@ -114,7 +156,7 @@
 						song.find('.song-artist').text(obj.artist);
 						song.find('.song-album').text(obj.album);
 						song.find('.song-length').text(obj.duration);
-						addSongNameClickEvent(obj.fileName,i+1)
+						addSongNameClickEvent(obj.fileName,i+1);
 					
 				 }
 				
@@ -164,3 +206,40 @@
                   toggleSong(); 
                 }
             });
+			
+			function move() {
+				
+				var slidder = document.getElementById("myBar"); 
+				var width = 0;
+				var id = setInterval(frame, 1000);
+				function frame() {
+					if (width >= 100) {
+						clearInterval(id);
+					} else {
+						width++; 
+						slidder.style.width = width + '%'; 
+					}
+				}
+			}
+			
+			
+						$('.play-icon').on('click', function() {
+				         move();
+		            	});
+	
+	
+	
+	
+						$('body').on('keypress', function(event) {
+							if (event.keyCode == 32) {
+							  move(); 
+							}
+						});
+			
+			
+			
+			
+			
+			
+			
+			

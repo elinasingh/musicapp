@@ -104,11 +104,17 @@ h1 {
 }
 
 .progress-filled {
-    background-color: #959595;
+    background-color: #3d3d3d;
     height: 8px;
     border-radius: 4px;
-    width: 0;
+    width: 100%;
 
+}
+
+#Bar {
+  width: 0%;
+  height: 8px;
+  background-color: #959595;
 }
 
 .main .content {
