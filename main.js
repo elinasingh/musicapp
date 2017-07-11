@@ -16,6 +16,96 @@
 				ret += "" + secs;
 				return ret;
 			}
+			
+				 var songs = [{          //objects ka array
+					'name': 'Alone',
+					'artist': 'Marshmello',
+					'album': 'Apple Music',
+					'duration': '4:33',
+				    'fileName': 'song1.mp3',
+				    'image': 'alone.jpg'
+				},
+				{
+					'name': 'Choo Lo',
+					'artist': 'The Local Train',
+					'album': 'Alas Ka Pedh',
+					'duration': '4:13',
+					'fileName': 'song2.mp3',
+					'image': 'choolo.jpg'
+				},
+				{
+					'name': 'Cheap Thrills',
+					'artist': 'Sia',
+					'album': 'This Is Acting',
+					'duration': '3:44',
+					'fileName': 'song3.mp3',
+					'image': 'cheap.jpg'
+				},
+				{
+					'name': 'Summer',
+					'artist': 'Marshmello',
+					'album': 'Joytime',
+					'duration': '1:45',
+					'fileName': 'song4.mp3',
+					'image': 'summer.jpg'
+				},
+				{
+					'name': 'Bhyanak Atma',
+					'artist': 'Nuclea',
+					'album': 'Raja Baja',
+					'duration': '3:29',
+					'fileName': 'song5.mp3',
+					'image': 'nuclea.jpg'
+				},
+				{
+					'name': 'Let Me Love You',
+					'artist': 'DJ Snake Ft Justin Bieber',
+					'album': 'Let Me Love You',
+					'duration': '3:26',
+					'fileName': 'song6.mp3',
+					'image': 'love.jpg'
+				},
+				{
+					'name': 'Closer',
+					'artist': 'The Chainsmokers',
+					'album': 'Closer',
+					'duration': '4:21',
+					'fileName': 'song7.mp3',
+					'image': 'closer.jpg'
+				},
+				{
+					'name': 'We Dont Talk Anymore',
+					'artist': 'Charlie Puth',
+					'album': 'Nine Track Mind',
+					'duration': '3:37',
+					'fileName': 'song8.mp3',
+					'image': 'talk.jpg'
+				},
+				{
+					'name': 'I Got You',
+					'artist': 'Bebe Rexha',
+					'album': 'Echo',
+					'duration': '3:11',
+					'fileName': 'song9.mp3',
+					'image': 'bebe.jpg'
+				},
+				{
+					'name': 'Jogi',
+					'artist': 'Swastik The Band',
+					'album': 'The Album',
+					'duration': '6:12',
+					'fileName': 'song10.mp3',
+					'image': 'jogi.jpg'
+				},
+				{
+					'name': 'Yeh Zindagi Hai',
+					'artist': 'The Local Train',
+					'album': 'Aalas Ka Pedh',
+					'duration': '4:09',
+					'fileName': 'song11.mp3',
+					'image': 'zindagi.jpg'
+				}]
+
 	
 	
 	   
@@ -34,7 +124,27 @@
 			}
 			
 			
-			function addSongNameClickEvent(songName,position) { //isse koi b song play pause kr skte or song jha se pause hoga bhi se play hoga
+				function changeCurrentSongDetails(songObj) {
+						$('.current-song-image').attr('src','img/' + songObj.image)
+						$('.current-song-name').text(songObj.name)
+						$('.current-song-album').text(songObj.album)
+					}
+					
+					
+					
+				 function updateCurrentTime() {  //isse hmara current time update hota rhega jb window load hojayegi through window.onload 
+					var song = document.querySelector('audio');
+					var currentTime = Math.floor(song.currentTime);//math.floor function se decimal value ignore hojayegi
+					currentTime = fancyTimeFormat(currentTime);//isse current time (1:20)ese type show hoga
+					var duration = Math.floor(song.duration);
+					duration = fancyTimeFormat(duration)//isse duration time (3:20)ese type show hoga
+					$('.time-elapsed').text(currentTime);//jo hmne time dala h bo text show hoga
+					$('.song-duration').text(duration);
+				}
+			
+			
+			function addSongNameClickEvent(songObj,position) { //isse koi b song play pause kr skte or song jha se pause hoga bhi se play hoga
+			 var songName = songObj.fileName; // New Variable 
 			var id = '#song' + position;
 			$(id).click(function() {
 			var audio = document.querySelector('audio');
@@ -46,107 +156,21 @@
 			else {
 			audio.src = songName;
 			toggleSong();
+			changeCurrentSongDetails(songObj); // Function Call
 			}
 			});
 			}
 	
-	
-	
-			  function updateCurrentTime() {  //isse hmara current time update hota rhega jb window load hojayegi through window.onload 
-					var song = document.querySelector('audio');
-					var currentTime = Math.floor(song.currentTime);//math.floor function se decimal value ignore hojayegi
-					currentTime = fancyTimeFormat(currentTime);//isse current time (1:20)ese type show hoga
-					var duration = Math.floor(song.duration);
-					duration = fancyTimeFormat(duration)//isse duration time (3:20)ese type show hoga
-					$('.time-elapsed').text(currentTime);//jo hmne time dala h bo text show hoga
-					$('.song-duration').text(duration);
-				}
 				
 				window.onload = function() {
+			    changeCurrentSongDetails(songs[0]);
 				updateCurrentTime();//jb window load hogi to current time btayegA fir 0 se start hoga
 				setInterval(function() {//isse hmara time hr second change hota rhega
 				updateCurrentTime();
 				},1000);
 				
 				
-				 var songs = [{          //objects ka array
-					'name': 'Alone',
-					'artist': 'Marshmello',
-					'album': 'Apple Music',
-					'duration': '4:33',
-				   'fileName': 'song4.mp3'
-				},
-				{
-					'name': 'Choo Lo',
-					'artist': 'The Local Train',
-					'album': 'Alas Ka Pedh',
-					'duration': '4:13',
-					'fileName': 'song5.mp3'
-				},
-				{
-					'name': 'Cheap Thrills',
-					'artist': 'Sia',
-					'album': 'This Is Acting',
-					'duration': '3:44',
-					'fileName': 'song6.mp3'
-				},
-				{
-					'name': 'Summer',
-					'artist': 'Marshmello',
-					'album': 'Joytime',
-					'duration': '1:45',
-					'fileName': 'song7.mp3'
-				},
-				{
-					'name': 'Bhyanak Atma',
-					'artist': 'Nuclea',
-					'album': 'Raja Baja',
-					'duration': '3:29',
-					'fileName': 'song8.mp3'
-				},
-				{
-					'name': 'Let Me Love You',
-					'artist': 'DJ Snake Ft Justin Bieber',
-					'album': 'Let Me Love You',
-					'duration': '3:26',
-					'fileName': 'song9.mp3'
-				},
-				{
-					'name': 'Closer',
-					'artist': 'The Chainsmokers',
-					'album': 'Closer',
-					'duration': '4:21',
-					'fileName': 'song10.mp3'
-				},
-				{
-					'name': 'We Dont Talk Anymore',
-					'artist': 'Charlie Puth',
-					'album': 'Nine Track Mind',
-					'duration': '3:37',
-					'fileName': 'song11.mp3'
-				},
-				{
-					'name': 'I Got You',
-					'artist': 'Bebe Rexha',
-					'album': 'Echo',
-					'duration': '3:11',
-					'fileName': 'song12.mp3'
-				},
-				{
-					'name': 'Jogi',
-					'artist': 'Swastik The Band',
-					'album': 'The Album',
-					'duration': '6:12',
-					'fileName': 'song13.mp3'
-				},
-				{
-					'name': 'Yeh Zindagi Hai',
-					'artist': 'The Local Train',
-					'album': 'Aalas Ka Pedh',
-					'duration': '4:09',
-					'fileName': 'song14.mp3'
-				}]
-
+			
 				
 				 for(var i =0; i < songs.length; i++) {            
 					 var obj = songs[i];
@@ -156,7 +180,7 @@
 						song.find('.song-artist').text(obj.artist);
 						song.find('.song-album').text(obj.album);
 						song.find('.song-length').text(obj.duration);
-						addSongNameClickEvent(obj.fileName,i+1);
+						addSongNameClickEvent(obj,i+1);
 					
 				 }
 				
@@ -172,6 +196,9 @@
 				//	addSongNameClickEvent(fileNames[i],i+1)
 				//} 
 				
+							$('#songs').DataTable({
+							paging: false
+							});
 				}
 				
 				
@@ -189,9 +216,7 @@
             $('#name-input').addClass('error'); // isme name-input naam ki id ko dhundna jis b element ke sath h 
         }
 		
-		
-		
-		
+	
 		
 			});
 			$('.play-icon').on('click', function() {
@@ -207,34 +232,7 @@
                 }
             });
 			
-			function move() {
-				
-				var slidder = document.getElementById("myBar"); 
-				var width = 0;
-				var id = setInterval(frame, 1000);
-				function frame() {
-					if (width >= 100) {
-						clearInterval(id);
-					} else {
-						width++; 
-						slidder.style.width = width + '%'; 
-					}
-				}
-			}
 			
-			
-						$('.play-icon').on('click', function() {
-				         move();
-		            	});
-	
-	
-	
-	
-						$('body').on('keypress', function(event) {
-							if (event.keyCode == 32) {
-							  move(); 
-							}
-						});
 			
 			
 			
