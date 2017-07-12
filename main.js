@@ -1,27 +1,5 @@
-				var currentSongNumber = 1;
-				var willLoop = 0;
-				var willShuffle = 0;
-				var nextSongNumber = randomExcluded(1,4,currentSongNumber);
-				
-				function fancyTimeFormat(time) //isse hmara currenttime or duration time ese(1:22) show hoga
-			{   
-				// Hours, minutes and seconds
-				var hrs = ~~(time / 3600);
-				var mins = ~~((time % 3600) / 60);
-				var secs = time % 60;
 
-				// Output like "1:01" or "4:03:59" or "123:03:59"
-				var ret = "";
 
-				if (hrs > 0) {
-					ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
-				}
-
-				ret += "" + mins + ":" + (secs < 10 ? "0" : "");
-				ret += "" + secs;
-				return ret;
-			}
-			
 				 var songs = [{          //objects ka array
 					'name': 'Alone',
 					'artist': 'Marshmello',
@@ -50,7 +28,7 @@
 					'name': 'Summer',
 					'artist': 'Marshmello',
 					'album': 'Joytime',
-					'duration': '1:45',
+					'duration': '3:53',
 					'fileName': 'song4.mp3',
 					'image': 'summer.jpg'
 				},
@@ -111,8 +89,31 @@
 					'image': 'zindagi.jpg'
 				}]
 
-	
-	
+
+				var currentSongNumber = 1;
+				var willLoop = 0;
+				var willShuffle = 0;
+				var nextSongNumber = randomExcluded(1,4,currentSongNumber);
+				
+				function fancyTimeFormat(time) //isse hmara currenttime or duration time ese(1:22) show hoga
+			{   
+				// Hours, minutes and seconds
+				var hrs = ~~(time / 3600);
+				var mins = ~~((time % 3600) / 60);
+				var secs = time % 60;
+
+				// Output like "1:01" or "4:03:59" or "123:03:59"
+				var ret = "";
+
+				if (hrs > 0) {
+					ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
+				}
+
+				ret += "" + mins + ":" + (secs < 10 ? "0" : "");
+				ret += "" + secs;
+				return ret;
+			}
+			
 	   
 			function toggleSong() { //is function ko hm jha b same code use hua hoga bha iska function name daal denge 
 			var song = document.querySelector('audio');//isme html file mai se queryselector mai jo b pda h usko select krna or audio ko dhund ke play krna 

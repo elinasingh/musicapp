@@ -42,6 +42,8 @@ body {
 	-webkit-transition:margin 0.05s ease, background-color 0.05s ease, box-radius0.05s ease;
 	background:white;
 	margin-top: -5px;
+	
+	
 }
 
 .keys:hover { 
