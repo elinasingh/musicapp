@@ -286,7 +286,7 @@
 			   }
 		   });
 		   
-		     $('#key-8').on('click' , function(){
+		      $('#key-8').on('click' , function(){
 			   piano.play('G#',3,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -300,7 +300,7 @@
 			   piano.play('A#',3,2);
 		   });
 		   $('body').on('keypress',function(event){
-			   if(event.keyCode==115)
+			   if(event.keyCode==65)
 			   {
 				   piano.play('A#',3,2);
 			   }
@@ -310,7 +310,7 @@
 			   piano.play('C#',4,2);
 		   });
 		   $('body').on('keypress',function(event){
-			   if(event.keyCode==102)
+			   if(event.keyCode==83)
 			   {
 				   piano.play('C#',4,2);
 			   }
@@ -320,7 +320,7 @@
 			   piano.play('D#',4,2);
 		   });
 		   $('body').on('keypress',function(event){
-			   if(event.keyCode==103)
+			   if(event.keyCode==70)
 			   {
 				   piano.play('D#',4,2);
 			   }
@@ -330,7 +330,7 @@
 			   piano.play('E#',4,2);
 		   });
 		   $('body').on('keypress',function(event){
-			   if(event.keyCode==106)
+			   if(event.keyCode==71)
 			   {
 				   piano.play('D#',4,2);
 			   }
@@ -340,7 +340,7 @@
 			   piano.play('E#',4,2);
 		   });
 		   $('body').on('keypress',function(event){
-			   if(event.keyCode==107)
+			   if(event.keyCode==74)
 			   {
 				   piano.play('E#',4,2);
 			   }
@@ -357,12 +357,12 @@
 		   });
 		   
 		     $('#key-15').on('click' , function(){
-			   piano.play('B#',5,2);
+			   piano.play('G#',5,2);
 		   });
 		   $('body').on('keypress',function(event){
 			   if(event.keyCode==76)
 			   {
-				   piano.play('B#',5,2);
+				   piano.play('G#',5,2);
 			   }
 		   });
 

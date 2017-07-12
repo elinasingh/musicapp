@@ -47,6 +47,7 @@ body {
 .keys:hover { 
     background-color: #B5E2F1;
     }
+	
 
 .black
 {
@@ -58,12 +59,15 @@ body {
 .label
 {
 	text-align: center;
+	padding-left:19px;
 	position: absolute;
 	top: 260px;
 	width:36px;
 	height:29px;
 	
 }
+
+
 .Blabel
 {
 	text-align: center;
@@ -78,5 +82,5 @@ body {
 {
 	float:right;
 	margin-top:240px;
-    margin-right:1010px;
+    margin-right:-250px;
 }

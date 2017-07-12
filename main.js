@@ -214,7 +214,7 @@
 	
         $('.welcome-screen button').on('click', function() {  //isme hm welcome screen mai button ko dhundenge or jb click hoga to niche vala code run hoga
         var name = $('#name-input').val();  // isme hmne nameinput id dhundo or to get the value jo b hmne tet type kiya
-        if (name.length > 2) {// agr hmari name ki length 2 se jyada h to welome message ayega 
+        if (name.length > 3) {// agr hmari name ki length 2 se jyada h to welome message ayega 
             var message = "Welcome, " + name; // isse welcome or jo b name type krenge 
             $('.main .user-name').text(message);  //or jo b text likha hoga bo message show hoga
             $('.welcome-screen').addClass('hidden'); //welcome screen hidden
