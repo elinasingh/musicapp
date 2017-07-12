@@ -34,7 +34,7 @@
 						<td> Album </td>
 						<td> Duration </td>
 					</thead>
-					<tbody class="song-list">
+					<tbody class="song-list" >
 							<tr class="song" id="song1">
 							<td class="song-name"></td>
 							<td class="song-artist"></td>
@@ -113,6 +113,7 @@
 							</tr>
 					</tbody>
 		         </table>
+				 
 		
 		
 		 <div class="current-song-wrapper">
@@ -128,17 +129,25 @@
             <footer>
                 <div class="controls">
                     <div class="player-buttons">
-                        <i class="fa fa-play clickable play-icon" aria-hidden="true"></i>
+					
+                          <i class="fa fa-random clickable disabled" aria-hidden="true"></i>
+						  <i class="fa fa-step-backward clickable" aria-hidden="true"></i>
+						  <i class="fa fa-play clickable play-icon" aria-hidden="true"></i>
+						  <i class="fa fa-step-forward clickable" aria-hidden="true"></i>
+						  <i class="fa fa-repeat disabled clickable" aria-hidden="true"></i>
+
                     </div>
                     <div class="progress-wrapper">
                         <span class="time-elapsed"> </span>
                         <div class="player-progress">
-                            <div class="progress-filled">
-                              
-							</div>
+                            <div class="progress-filled"></div>
                         </div>
                         <span class="song-duration"></span>
+					
                     </div>
+					    <div class ="next-page">
+						<button class= "next"> <a href="piano.html">Lets Play Piano </a></button>
+						</div>
                 </div>
             </footer>
         </div>

@@ -90,6 +90,7 @@ h1 {
     align-items: center;
 }
 
+
 .progress-wrapper span {
     color: #959595;
 }
@@ -104,7 +105,7 @@ h1 {
 }
 
 .progress-filled {
-    background-color: #3d3d3d;
+    background-color: #959595;
     height: 8px;
     border-radius: 4px;
     width: 0;
@@ -149,9 +150,10 @@ h1 {
     overflow: hidden;
     height: 1rem;
 }
-.song > span:first-child.content {
-    position: relative;
+.song > span:first-child {
+   width: 330px;
 }
+
 .current-song-wrapper {
     position: absolute;
     bottom: 0;
@@ -162,22 +164,22 @@ h1 {
     height: 100px;
     width: 100px;
     margin-right: 1rem;
-	
+	 margin-top: 25px;
 }
 
 .current-song-name {
     font-size: 1.4rem;
-    margin-top: 4px;
+    margin-top: 25px;
     margin-bottom: 0;
+	
 }
 
 .current-song-album {
     margin-top: 0.4rem;
+	
 } 
 
-{
-    width: 330px;
-}
+
 
 .song .song-duration {
     text-align: right;
@@ -191,9 +193,12 @@ h1 {
 .song-length {
     text-align: right;
 }
+.content{
+	position:relative;
+}
 
 
-            /*DataTables overrides*/
+ /*DataTables overrides*/
 table.dataTable tbody tr {
     background-color: initial;
 }
@@ -212,5 +217,20 @@ table.dataTable tbody tr {
 	outline:none;
 	border:none;
 }
+.next
+{
+	float:right;
+	margin-top:-21px;
+    margin-right:15px;
+}
+
+.player-buttons .fa {
+    margin-right: 2rem;
+}
+
+.fa.disabled {
+    color: gray;
+}
+
         
 
