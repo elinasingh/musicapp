@@ -1,10 +1,10 @@
-   alert("The respective keys are written can also play the piano, make sure your  caps lock is on before playing.Enjoy!")
+  
    window.onload = function()
    {
 	   var piano= Synth.createInstrument('piano');
 	   
 	   
-	   $(#key_1).on('click',function(){
+	   $('#key_1').on('click',function(){
 		   piano.play('C',3,2);
 	   });
 	   $('body').on('keypress',function(event){
@@ -14,7 +14,7 @@
 		   }
 	   }); 
 	   
-	    $(#key_2).on('click' , function(){
+	    $('#key_2').on('click' , function(){
 		   piano.play('D',3,2);
 	   });
 	   $('body').on('keypress',function(event){
@@ -25,7 +25,7 @@
 	   });
 	   
 	   
-         $(#key_3).on('click' , function(){                                              
+         $('#key_3').on('click' , function(){                                              
 			   piano.play('E',3,2);                                                       
 		   });
 		   $('body').on('keypress',function(event){
@@ -35,7 +35,7 @@
 			   }
 		   });
 		   
-		    $(#key_4).on('click' , function(){
+		    $('#key_4').on('click' , function(){
 			   piano.play('F',3,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -45,7 +45,7 @@
 			   }
 		   });
 		   
-		     $(#key_5).on('click' , function(){
+		     $('#key_5').on('click' , function(){
 			   piano.play('G',3,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -55,7 +55,7 @@
 			   }
 		   });
 		   
-		     $(#key_6).on('click' , function(){
+		     $('#key_6').on('click' , function(){
 			   piano.play('A',3,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -65,7 +65,7 @@
 			   }
 		   });
 		   
-		     $(#key_7).on('click' , function(){
+		     $('#key_7').on('click' , function(){
 			   piano.play('B',3,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -75,7 +75,7 @@
 			   }
 		   });
 		   
-		     $(#key_8).on('click' , function(){
+		     $('#key_8').on('click' , function(){
 			   piano.play('C',4,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -85,7 +85,7 @@
 			   }
 		   });
 		   
-		     $(#key_9).on('click' , function(){
+		     $('#key_9').on('click' , function(){
 			   piano.play('D',4,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -95,7 +95,7 @@
 			   }
 		   });
 		   
-		     $(#key_10).on('click' , function(){
+		     $('#key_10').on('click' , function(){
 			   piano.play('E',4,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -105,7 +105,7 @@
 			   }
 		   });
 		   
-		     $(#key_11).on('click' , function(){
+		     $('#key_11').on('click' , function(){
 			   piano.play('F',4,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -115,7 +115,7 @@
 			   }
 		   });
 		   
-		     $(#key_12).on('click' , function(){
+		     $('#key_12').on('click' , function(){
 			   piano.play('G',4,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -125,7 +125,7 @@
 			   }
 		   });
 		   
-		     $(#key_13).on('click' , function(){
+		     $('#key_13').on('click' , function(){
 			   piano.play('A',4,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -135,7 +135,7 @@
 			   }
 		   });
 		   
-		     $(#key_14).on('click' , function(){
+		     $('#key_14').on('click' , function(){
 			   piano.play('B',4,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -145,7 +145,7 @@
 			   }
 		   });
 		   
-		     $(#key_15).on('click' , function(){
+		     $('#key_15').on('click' , function(){
 			   piano.play('C',5,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -155,7 +155,7 @@
 			   }
 		   });
 		   
-		     $(#key_16).on('click' , function(){
+		     $('#key_16').on('click' , function(){
 			   piano.play('D',5,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -165,7 +165,7 @@
 			   }
 		   });
 		   
-		     $(#key_17).on('click' , function(){
+		     $('#key_17').on('click' , function(){
 			   piano.play('E',5,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -175,7 +175,7 @@
 			   }
 		   });
 		   
-		     $(#key_18).on('click' , function(){
+		     $('#key_18').on('click' , function(){
 			   piano.play('F',5,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -185,7 +185,7 @@
 			   }
 		   });
 		   
-		     $(#key_19).on('click' , function(){
+		     $('#key_19').on('click' , function(){
 			   piano.play('G',5,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -195,7 +195,7 @@
 			   }
 		   });
 		   
-		     $(#key_20).on('click' , function(){
+		     $('#key_20').on('click' , function(){
 			   piano.play('A',5,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -206,7 +206,7 @@
 		   });
 		   
 		   
-		      $(#key_21).on('click' , function(){
+		      $('#key_21').on('click' , function(){
 			   piano.play('B',5,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -216,7 +216,7 @@
 			   }
 		   });
 		   
-		     $(#key-1).on('click' , function(){
+		     $('#key-1').on('click' , function(){
 			   piano.play('C#',3,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -226,17 +226,17 @@
 			   }
 		   });
 		   
-		     $(#key-2).on('click' , function(){
+		     $('#key-2').on('click' , function(){
 			   piano.play('C#',3,2);
 		   });
 		   $('body').on('keypress',function(event){
 			   if(event.keyCode==51)
 			   {
 				   piano.play('C#',3,2);
-			   
+			   }
 		   });
 		   
-		     $(#key-3).on('click' , function(){
+		     $('#key-3').on('click' , function(){
 			   piano.play('D#',3,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -246,7 +246,7 @@
 			   }
 		   });
 		   
-		     $(#key-4).on('click' , function(){
+		     $('#key-4').on('click' , function(){
 			   piano.play('E#',3,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -256,7 +256,7 @@
 			   }
 		   });
 		   
-		     $(#key-5).on('click' , function(){
+		     $('#key-5').on('click' , function(){
 			   piano.play('G#',3,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -266,7 +266,7 @@
 			   }
 		   });
 		   
-		     $(#key-6).on('click' , function(){
+		     $('#key-6').on('click' , function(){
 			   piano.play('F#',3,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -276,7 +276,7 @@
 			   }
 		   });
 		   
-		     $(#key-7).on('click' , function(){
+		     $('#key-7').on('click' , function(){
 			   piano.play('B#',3,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -286,17 +286,17 @@
 			   }
 		   });
 		   
-		     $(#key-8).on('click' , function(){
+		     $('#key-8').on('click' , function(){
 			   piano.play('G#',3,2);
 		   });
 		   $('body').on('keypress',function(event){
-			   if(event.keyCode==97)
+			   if(event.keyCode==187)
 			   {
 				   piano.play('G#',3,2);
 			   }
 		   });
 		   
-		     $(#key-9).on('click' , function(){
+		     $('#key-9').on('click' , function(){
 			   piano.play('A#',3,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -306,7 +306,7 @@
 			   }
 		   });
 		   
-		     $(#key-10).on('click' , function(){
+		     $('#key-10').on('click' , function(){
 			   piano.play('C#',4,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -316,7 +316,7 @@
 			   }
 		   });
 		   
-		     $(#key-11).on('click' , function(){
+		     $('#key-11').on('click' , function(){
 			   piano.play('D#',4,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -326,7 +326,7 @@
 			   }
 		   });
 		   
-		     $(#key-12).on('click' , function(){
+		     $('#key-12').on('click' , function(){
 			   piano.play('E#',4,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -336,7 +336,7 @@
 			   }
 		   });
 		   
-		     $(#key-13).on('click' , function(){
+		     $('#key-13').on('click' , function(){
 			   piano.play('E#',4,2);
 		   });
 		   $('body').on('keypress',function(event){
@@ -346,21 +346,21 @@
 			   }
 		   });
 		   
-		     $(#key-14).on('click' , function(){
+		     $('#key-14').on('click' , function(){
 			   piano.play('F#',4,2);
 		   });
 		   $('body').on('keypress',function(event){
-			   if(event.keyCode==107)
+			   if(event.keyCode==75)
 			   {
 				   piano.play('F#',5,2);
 			   }
 		   });
 		   
-		     $(#key-15).on('click' , function(){
+		     $('#key-15').on('click' , function(){
 			   piano.play('B#',5,2);
 		   });
 		   $('body').on('keypress',function(event){
-			   if(event.keyCode==108)
+			   if(event.keyCode==76)
 			   {
 				   piano.play('B#',5,2);
 			   }
