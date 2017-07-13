@@ -93,7 +93,6 @@
 				var currentSongNumber = 1;
 				var willLoop = 0;
 				var willShuffle = 0;
-				var nextSongNumber = randomExcluded(1,4,currentSongNumber);
 				
 				function fancyTimeFormat(time) //isse hmara currenttime or duration time ese(1:22) show hoga
 			{   
@@ -114,6 +113,13 @@
 				return ret;
 			}
 			
+			     function updateTimer(){
+					 var song =document.querySelector('audio')
+					 var ct=song.currentTime;
+					 var td=song.duration;
+					 var percentage=(ct/td)*100;
+					 $(".progress-filled").css('width',percentage+"%");
+				 }
 	   
 			function toggleSong() { //is function ko hm jha b same code use hua hoga bha iska function name daal denge 
 			var song = document.querySelector('audio');//isme html file mai se queryselector mai jo b pda h usko select krna or audio ko dhund ke play krna 
@@ -166,6 +172,13 @@
 			}
 			});
 			}
+			
+			
+				function randomExcluded(min, max, excluded) {
+						var n = Math.floor(Math.random() * (max-min) + min);
+						if (n >= excluded) n++;
+						return n;
+					}
 	
 				
 				window.onload = function() {
@@ -173,7 +186,9 @@
 				updateCurrentTime();//jb window load hogi to current time btayegA fir 0 se start hoga
 				setInterval(function() {//isse hmara time hr second change hota rhega
 				updateCurrentTime();
+				updateTimer();
 				},1000);
+				}
 				
 				
 			
@@ -197,21 +212,7 @@
 				//addSongNameClickEvent(fileNames[4],5);
 				
 				
-							
-				//for (var i = 0; i < fileNames.length ; i++) {
-				//	addSongNameClickEvent(fileNames[i],i+1)
-				//} 
 				
-							$('#songs').DataTable({
-							    "scrollY":        "200px",
-								"scrollCollapse": true,
-								"paging":         false
-							});
-				}
-				
-				
-	
-	
 	
         $('.welcome-screen button').on('click', function() {  //isme hm welcome screen mai button ko dhundenge or jb click hoga to niche vala code run hoga
         var name = $('#name-input').val();  // isme hmne nameinput id dhundo or to get the value jo b hmne tet type kiya
@@ -223,30 +224,20 @@
         } else {//wrna error show krega
             $('#name-input').addClass('error'); // isme name-input naam ki id ko dhundna jis b element ke sath h 
         }
-		
-	
-		
 			});
-			$('.play-icon').on('click', function() {
-				toggleSong();//ye hmara function ka name h jisse hmara same code run hoga jo us function mai likha h
-			});
-		
 			
-				$('body').on('keypress',function(event) {
-				var target = event.target;
-				if (event.keyCode == 32 && target.tagName !='INPUT')
-				{
-					toggleSong();
-				}
-		    });
-			
-								function randomExcluded(min, max, excluded) {
-						var n = Math.floor(Math.random() * (max-min) + min);
-						if (n >= excluded) n++;
-						return n;
-					}
-			
-						$('audio').on('ended',function() {
+								$('.fa-repeat').on('click',function() {
+							$('.fa-repeat').toggleClass('disabled')
+							willLoop = 1 - willLoop;
+						});
+						
+								$('.fa-random').on('click',function() {
+								$('.fa-random').toggleClass('disabled')
+								willShuffle = 1 - willShuffle;
+						});
+				
+				
+					$('audio').on('ended',function() {
 							var audio = document.querySelector('audio');
 							if (willShuffle == 1) {
 								var nextSongNumber = randomExcluded(1,4,currentSongNumber); // Calling our function from Stackoverflow
@@ -275,24 +266,47 @@
 								audio.currentTime = 0;
 							}
 					})
+				
+		
+			
+				
+			$('.play-icon').on('click', function() {
+				toggleSong();//ye hmara function ka name h jisse hmara same code run hoga jo us function mai likha h
+			});
+		
+			
+				$('body').on('keypress',function(event) {
+				var target = event.target;
+				if (event.keyCode == 32 && target.tagName !='INPUT')
+				{
+					toggleSong();
+				}
+		    });
+			
+						
+							
+				//for (var i = 0; i < fileNames.length ; i++) {
+				//	addSongNameClickEvent(fileNames[i],i+1)
+				//} 
+				
+							$('#songs').DataTable({
+								"scrollY": "200px",
+								"scrollCollapse": true,
+								"paging":  false
+							});
+				
+				
+				
+	
+		
+			
+					
 							
 						function timeJump() {
 						var song = document.querySelector('audio')
 				        song.currentTime = song.duration - 5;
 		                 }
-			
-			
-			$('.fa-repeat').on('click',function() {
-			$('.fa-repeat').toggleClass('disabled')
-			willLoop = 1 - willLoop;
-		});
 		
-				$('.fa-random').on('click',function() {
-				$('.fa-random').toggleClass('disabled')
-				willShuffle = 1 - willShuffle;
-		});
-			
-			
 			
 			
 			
