@@ -235,19 +235,19 @@
 								$('.fa-random').toggleClass('disabled')
 								willShuffle = 1 - willShuffle;
 						});
-				
-				
+						
+					
 					$('audio').on('ended',function() {
 							var audio = document.querySelector('audio');
 							if (willShuffle == 1) {
-								var nextSongNumber = randomExcluded(1,4,currentSongNumber); // Calling our function from Stackoverflow
+								var nextSongNumber = randomExcluded(1,11,currentSongNumber); // Calling our function from Stackoverflow
 								var nextSongObj = songs[nextSongNumber-1];
 								audio.src = nextSongObj.fileName;
 								toggleSong();
 								changeCurrentSongDetails(nextSongObj);
 								currentSongNumber = nextSongNumber;
 							}
-							else if(currentSongNumber < 4) {
+							else if(currentSongNumber < 11) {
 								var nextSongObj = songs[currentSongNumber];
 								audio.src = nextSongObj.fileName;
 								toggleSong();

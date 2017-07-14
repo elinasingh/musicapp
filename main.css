@@ -17,22 +17,25 @@ h1 {
     border: 0;
     margin: 0;
 	font-size:5em;
+	color:#DCEBF5  ;
 }
 
 h3
 {
 	font-size:2em;
+	color:#DCEBF5  ;
 }
 
 .input-size
 {
-	padding:10px 10px 10px 10px;
+	padding:8px 8px 8px 8px;
 	margin:0px 10px 0px 10px;
+	
 }
 .wrapper {
     height: 100%;
     width: 100%;
-    background: url("img/earphones.jpg");
+    background: url("img/headphone.jpg");
 	background-size:cover;
 
 	
@@ -53,24 +56,25 @@ h3
     display: flex;
     flex-direction: column;
     color: white;
-    background-color: #1f1f1f;
+    background: url("img/n.gif");
+	background-size:cover;
 }
 
 .main header {
     height: 80px;
-    background-color: #282828;
+   
     padding: 1rem;
     color: #FFF;
 }
 
 .main .content {
     flex:1;
-    background-color: #1f1f1f;
+ 
 }
 
 .main footer {
     height: 80px;
-    background-color: #282828;
+   
     padding-top: 1rem;
 }
 
@@ -200,7 +204,7 @@ h3
 }
 
 .song-list .song:hover {
-    background-color: #0E0C0C;
+    background-color:rgba(118, 114, 115 ,0.5);
 }
 
 
@@ -236,8 +240,8 @@ table.dataTable tbody tr {
 	float:right;
 	margin-top:-21px;
     margin-right:15px;
-    
-	border:none;
+	padding:2px 10px 2px 10px;
+	
 }
 
 .player-buttons .fa {
@@ -247,6 +251,8 @@ table.dataTable tbody tr {
 .fa.disabled {
     color: gray;
 }
+
+
 
 
 
