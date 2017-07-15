@@ -93,6 +93,7 @@ h3
 
 .right.floated {
     float: right;
+	font-size: 20px;
 }
 
 .clickable {
@@ -154,6 +155,7 @@ h3
 
 .list-headers > div:last-child {
     text-align: right;
+	
 }
 
 .song-list .song {
@@ -230,12 +232,13 @@ table.dataTable tbody tr {
     color: transparent;
 }
 #songs_filter input {
-    width: 250px;
+    width: 240px;
     margin-bottom: 1rem;
     font-size: 16px;
 	border-radius:20px;
 	outline:none;
 	border:none;
+   
 }
 .next
 {

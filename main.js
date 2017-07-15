@@ -55,38 +55,6 @@
 					'duration': '4:21',
 					'fileName': 'song7.mp3',
 					'image': 'closer.jpg'
-				},
-				{
-					'name': 'We Dont Talk Anymore',
-					'artist': 'Charlie Puth',
-					'album': 'Nine Track Mind',
-					'duration': '3:37',
-					'fileName': 'song8.mp3',
-					'image': 'talk.jpg'
-				},
-				{
-					'name': 'I Got You',
-					'artist': 'Bebe Rexha',
-					'album': 'Echo',
-					'duration': '3:11',
-					'fileName': 'song9.mp3',
-					'image': 'bebe.jpg'
-				},
-				{
-					'name': 'Jogi',
-					'artist': 'Swastik The Band',
-					'album': 'The Album',
-					'duration': '6:12',
-					'fileName': 'song10.mp3',
-					'image': 'jogi.jpg'
-				},
-				{
-					'name': 'Yeh Zindagi Hai',
-					'artist': 'The Local Train',
-					'album': 'Aalas Ka Pedh',
-					'duration': '4:09',
-					'fileName': 'song11.mp3',
-					'image': 'zindagi.jpg'
 				}]
 
 
@@ -179,6 +147,7 @@
 						if (n >= excluded) n++;
 						return n;
 					}
+					
 	
 				
 				window.onload = function() {
@@ -211,19 +180,20 @@
 				//addSongNameClickEvent(fileNames[3],4);
 				//addSongNameClickEvent(fileNames[4],5);
 				
+			
 				
 				
 	
         $('.welcome-screen button').on('click', function() {  //isme hm welcome screen mai button ko dhundenge or jb click hoga to niche vala code run hoga
         var name = $('#name-input').val();  // isme hmne nameinput id dhundo or to get the value jo b hmne tet type kiya
-        if (name.length > 3) {// agr hmari name ki length 2 se jyada h to welome message ayega 
+            if (name.length > 3) {// agr hmari name ki length 2 se jyada h to welome message ayega 
             var message = "Welcome, " + name; // isse welcome or jo b name type krenge 
             $('.main .user-name').text(message);  //or jo b text likha hoga bo message show hoga
             $('.welcome-screen').addClass('hidden'); //welcome screen hidden
             $('.main').removeClass('hidden');  //main screen hidden
-        } else {//wrna error show krega
-            $('#name-input').addClass('error'); // isme name-input naam ki id ko dhundna jis b element ke sath h 
-        }
+			} else  {//wrna error show krega
+				$('#name-input').addClass('error'); // isme name-input naam ki id ko dhundna jis b element ke sath h 
+			}
 			});
 			
 								$('.fa-repeat').on('click',function() {
@@ -240,14 +210,14 @@
 					$('audio').on('ended',function() {
 							var audio = document.querySelector('audio');
 							if (willShuffle == 1) {
-								var nextSongNumber = randomExcluded(1,11,currentSongNumber); // Calling our function from Stackoverflow
+								var nextSongNumber = randomExcluded(1,7,currentSongNumber); // Calling our function from Stackoverflow
 								var nextSongObj = songs[nextSongNumber-1];
 								audio.src = nextSongObj.fileName;
 								toggleSong();
 								changeCurrentSongDetails(nextSongObj);
 								currentSongNumber = nextSongNumber;
 							}
-							else if(currentSongNumber < 11) {
+							else if(currentSongNumber < 7) {
 								var nextSongObj = songs[currentSongNumber];
 								audio.src = nextSongObj.fileName;
 								toggleSong();
@@ -290,12 +260,8 @@
 				//} 
 				
 							$('#songs').DataTable({
-
-								"scrollY": "200px",
-								"scrollCollapse": true,
-								"paging":  false
-								
-								  
+								autoWidth: false,
+								"paging":  false  
 							});
 						
 							
