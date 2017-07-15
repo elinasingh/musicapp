@@ -20,6 +20,8 @@ h1 {
 	color:#DCEBF5  ;
 }
 
+
+
 h3
 {
 	font-size:2em;
@@ -41,7 +43,7 @@ h3
 	
 }
 
-.welcome-screen {
+.welcome-screen{
     height: 100%;
     width: 100%;
     display: flex;
@@ -56,7 +58,7 @@ h3
     display: flex;
     flex-direction: column;
     color: white;
-    background: url("img/n.gif");
+    background: url("img/h.gif");
 	background-size:cover;
 }
 

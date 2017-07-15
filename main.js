@@ -265,7 +265,7 @@
 								$('.play-icon').removeClass('fa-pause').addClass('fa-play');
 								audio.currentTime = 0;
 							}
-					})
+					});
 				
 		
 			
@@ -290,17 +290,14 @@
 				//} 
 				
 							$('#songs').DataTable({
+
 								"scrollY": "200px",
 								"scrollCollapse": true,
 								"paging":  false
+								
+								  
 							});
-				
-				
-				
-	
-		
-			
-					
+						
 							
 						function timeJump() {
 						var song = document.querySelector('audio')
