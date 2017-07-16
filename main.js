@@ -88,6 +88,13 @@
 					 var percentage=(ct/td)*100;
 					 $(".progress-filled").css('width',percentage+"%");
 				 }
+				 
+				 
+				 function setvolume()
+				 {
+					 var song = document.querySelector('audio');
+					 song.volume = slider.value/100;
+				 }
 	   
 			function toggleSong() { //is function ko hm jha b same code use hua hoga bha iska function name daal denge 
 			var song = document.querySelector('audio');//isme html file mai se queryselector mai jo b pda h usko select krna or audio ko dhund ke play krna 
@@ -205,6 +212,12 @@
 								$('.fa-random').toggleClass('disabled')
 								willShuffle = 1 - willShuffle;
 						});
+						
+						 $('#slider').on('mousemove',function()
+						 {
+							 setvolume();
+						 }
+						 );
 						
 					
 					$('audio').on('ended',function() {
