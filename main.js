@@ -61,6 +61,19 @@
 				var currentSongNumber = 1;
 				var willLoop = 0;
 				var willShuffle = 0;
+				var willmute=1;
+				function mute()
+				{
+					var song = document.querySelector('audio');
+					if(song.muted)
+					{
+						song.muted=false;
+					}
+					else
+					{
+                        song.muted=true;
+					}
+				}
 				
 				function fancyTimeFormat(time) //isse hmara currenttime or duration time ese(1:22) show hoga
 			{   
@@ -203,6 +216,12 @@
 			}
 			});
 			
+								$('.fa-volume-up').on('click',function() {
+							$('.fa-volume-up').toggleClass('disabled')
+							willmute = 1 - willmute;
+							mute();
+						});
+						
 								$('.fa-repeat').on('click',function() {
 							$('.fa-repeat').toggleClass('disabled')
 							willLoop = 1 - willLoop;

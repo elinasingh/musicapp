@@ -9,7 +9,7 @@
 				   $('body').on('keypress',function(event){
 					   if(event.keyCode==81 || event.keyCode==113)
 					   {
-						   
+						   $('keys').addClass('hover')
 						   piano.play('C',3,2);
 						   
 					   }
@@ -21,7 +21,7 @@
 				   $('body').on('keypress',function(event){
 					   if(event.keyCode==87 || event.keyCode==119)
 					   {
-						   
+						    $('keys').addClass('hover')
 						   piano.play('D',3,2);
 						   
 					   }
@@ -34,6 +34,7 @@
 			
 			   if(event.keyCode==69 || event.keyCode==101)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('E',3,2);
 			   }
 		   });
@@ -45,6 +46,7 @@
 			  
 			   if(event.keyCode==82 || event.keyCode==114)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('F',3,2);
 			   }
 		   });
@@ -56,6 +58,7 @@
 			  
 			   if(event.keyCode==84 || event.keyCode==116)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('G',3,2);
 			   }
 		   });
@@ -67,6 +70,7 @@
 			  
 			   if(event.keyCode==89  || event.keyCode==121)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('A',3,2);
 			   }
 		   });
@@ -78,6 +82,7 @@
 			  
 			   if(event.keyCode==85 || event.keyCode==117)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('B',3,2);
 			   }
 		   });
@@ -89,6 +94,7 @@
 		
 			   if(event.keyCode==73 || event.keyCode==105)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('C',4,2);
 			   }
 		   });
@@ -100,6 +106,7 @@
 			  
 			   if(event.keyCode==79 || event.keyCode==111)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('D',4,2);
 			   }
 		   });
@@ -112,6 +119,7 @@
 			  
 			   if(event.keyCode==80 || event.keyCode==112)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('E',4,2);
 			   }
 		   });
@@ -123,6 +131,7 @@
 			  
 			   if(event.keyCode==90|| event.keyCode==122 )
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('F',4,2);
 			   }
 		   });
@@ -134,6 +143,7 @@
 			  
 			   if(event.keyCode==88|| event.keyCode==120)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('G',4,2);
 			   }
 		   });
@@ -145,6 +155,7 @@
 			  
 			   if(event.keyCode==67 || event.keyCode==99)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('A',4,2);
 			   }
 		   });
@@ -156,6 +167,7 @@
 			  
 			   if(event.keyCode==86 || event.keyCode==118)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('B',4,2);
 			   }
 		   });
@@ -167,6 +179,7 @@
 			  
 			   if(event.keyCode==66 || event.keyCode==98)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('C',5,2);
 			   }
 		   });
@@ -178,6 +191,7 @@
 			  
 			   if(event.keyCode==78 || event.keyCode==110)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('D',5,2);
 			   }
 		   });
@@ -189,6 +203,7 @@
 			
 			   if(event.keyCode==77 || event.keyCode==109)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('E',5,2);
 			   }
 		   });
@@ -200,6 +215,7 @@
 			 
 			   if(event.keyCode==65 || event.keyCode==97)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('F',5,2);
 			   }
 		   });
@@ -211,6 +227,7 @@
 			  
 			   if(event.keyCode==83 || event.keyCode==115)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('G',5,2);
 			   }
 		   });
@@ -222,6 +239,7 @@
 			 
 			   if(event.keyCode==91)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('A',5,2);
 			   }
 		   });
@@ -234,6 +252,7 @@
 			  
 			   if(event.keyCode==93)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('B',5,2);
 			   }
 		   });
@@ -245,6 +264,7 @@
 			  
 			   if(event.keyCode==50)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('C#',3,2);
 			   }
 		   });
@@ -267,6 +287,7 @@
 			  
 			   if(event.keyCode==53)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('D#',3,2);
 			   }
 		   });
@@ -278,6 +299,7 @@
 		   $('body').on('keypress',function(event){
 			   if(event.keyCode==54)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('E#',3,2);
 			   }
 		   });
@@ -289,6 +311,7 @@
 			  
 			   if(event.keyCode==55)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('F#',3,2);
 			   }
 		   });
@@ -300,6 +323,7 @@
 			  
 			   if(event.keyCode==57)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('G#',3,2);
 			   }
 		   });
@@ -311,6 +335,7 @@
 			  
 			   if(event.keyCode==48)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('A#',3,2);
 			   }
 		   });
@@ -322,6 +347,7 @@
 			 
 			   if(event.keyCode==68 || event.keyCode==100)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('B#',3,2);
 			   }
 		   });
@@ -333,6 +359,7 @@
 			  
 			   if(event.keyCode==70 || event.keyCode==102)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('C#',3,2);
 			   }
 		   });
@@ -344,6 +371,7 @@
 			  
 			   if(event.keyCode==71  || event.keyCode==103)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('D#',4,2);
 			   }
 		   });
@@ -355,6 +383,7 @@
 			 
 			   if(event.keyCode==72 || event.keyCode==104)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('D#',4,2);
 			   }
 		   });
@@ -366,6 +395,7 @@
 			  
 			   if(event.keyCode==74 || event.keyCode==106)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('E#',4,2);
 			   }
 		   });
@@ -377,6 +407,7 @@
 			 
 			   if(event.keyCode==75 || event.keyCode==107)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('F#',4,2);
 			   }
 		   });
@@ -387,6 +418,7 @@
 		   $('body').on('keypress',function(event){
 			   if(event.keyCode==76 || event.keyCode==108)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('G#',5,2);
 			   }
 		   });
@@ -397,9 +429,17 @@
 		   $('body').on('keypress',function(event){
 			  if(event.keyCode==59 || event.keyCode==186)
 			   {
+				    $('keys').addClass('hover')
 				   piano.play('A#',5,2);
 			   }
 		   });
+		   
+		   if 
+		   {
+			   $('body').on('keypress',function(event){
+			       $('keys').removeClass('hover')
+			   }
+		   }
 
 					   
 						   
