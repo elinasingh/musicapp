@@ -324,7 +324,7 @@
 			  
 			   if(event.keyCode==57)
 			   {
-				    $('keys').addClass('hover')
+				    $('#key-6').addClass('hover')
 				   piano.play('G#',3,2);
 			   }
 		   });
@@ -384,7 +384,7 @@
 			 
 			   if(event.keyCode==72 || event.keyCode==104)
 			   {
-				    $('keys').addClass('hover')
+				    $('#key-11').addClass('hover')
 				   piano.play('D#',4,2);
 			   }
 		   });
@@ -430,7 +430,7 @@
 		   $('body').on('keypress',function(event){
 			  if(event.keyCode==59 || event.keyCode==186)
 			   {
-				    $('keys-15').addClass('hover')
+				    $('#key-15').addClass('hover')
 				   piano.play('A#',5,2);
 			   }
 		   });

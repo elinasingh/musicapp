@@ -161,6 +161,46 @@
 			});
 			}
 			
+			$('.fa-step-forward').on('click',function(){
+				var audio = document.querySelector('audio');
+				var nextSongobj = songs[currentSongNumber];
+				audio.src = nextSongobj.fileName;
+				toggleSong();
+				
+				 changeCurrentSongDetails(nextSongobj);
+				 currentSongNumber = currentSongNumber +1;
+				 if(currentSongNumber ==7)
+				 {
+					$('.fa-step-forward').toggleClass('disabled');
+					$('.play-icon').removeClass('fa-play').addClass('fa-pause'); 
+				 }
+			});
+			
+			$('audio').on('ended',function()
+			{
+				toggleClass();
+			})
+			
+				$('.fa-step-backward').on('click',function(){
+				var audio = document.querySelector('audio');
+				var nextSongobj = songs[currentSongNumber];
+				audio.src = nextSongobj.fileName;
+				toggleSong();
+				
+				 changeCurrentSongDetails(nextSongobj);
+				 currentSongNumber = currentSongNumber -1;
+				 if(currentSongNumber ==0)
+				 {
+					$('.fa-step-backward').toggleClass('disabled');
+					$('.play-icon').removeClass('fa-play').addClass('fa-pause'); 
+				 }
+			});
+			
+			$('audio').on('ended',function()
+			{
+				toggleClass();
+			})
+			
 			
 				function randomExcluded(min, max, excluded) {
 						var n = Math.floor(Math.random() * (max-min) + min);
