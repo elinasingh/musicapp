@@ -181,25 +181,7 @@
 				toggleClass();
 			})
 			
-				$('.fa-step-backward').on('click',function(){
-				var audio = document.querySelector('audio');
-				var nextSongobj = songs[currentSongNumber];
-				audio.src = nextSongobj.fileName;
-				toggleSong();
-				
-				 changeCurrentSongDetails(nextSongobj);
-				 currentSongNumber = currentSongNumber -1;
-				 if(currentSongNumber ==0)
-				 {
-					$('.fa-step-backward').toggleClass('disabled');
-					$('.play-icon').removeClass('fa-play').addClass('fa-pause'); 
-				 }
-			});
 			
-			$('audio').on('ended',function()
-			{
-				toggleClass();
-			})
 			
 			
 				function randomExcluded(min, max, excluded) {
@@ -252,7 +234,9 @@
             $('.welcome-screen').addClass('hidden'); //welcome screen hidden
             $('.main').removeClass('hidden');  //main screen hidden
 			} else  {//wrna error show krega
+			    var error='type name more than three letters';
 				$('#name-input').addClass('error'); // isme name-input naam ki id ko dhundna jis b element ke sath h 
+				$('.error-msg').removeClass('hidden').text(error);
 			}
 			});
 			

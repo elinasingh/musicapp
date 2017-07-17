@@ -266,6 +266,12 @@ input #slider
 	margin-right:15px;
 	
 }
+.error-msg
+{
+	background-color:white;
+	border-radius:2px;
+	padding:2px;
+}
 
 
 
