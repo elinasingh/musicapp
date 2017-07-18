@@ -160,26 +160,89 @@
 			}
 			});
 			}
-			
-			$('.fa-step-forward').on('click',function(){
-				var audio = document.querySelector('audio');
-				var nextSongobj = songs[currentSongNumber];
-				audio.src = nextSongobj.fileName;
-				toggleSong();
-				
-				 changeCurrentSongDetails(nextSongobj);
-				 currentSongNumber = currentSongNumber +1;
-				 if(currentSongNumber ==7)
-				 {
-					$('.fa-step-forward').toggleClass('disabled');
-					$('.play-icon').removeClass('fa-play').addClass('fa-pause'); 
-				 }
-			});
-			
-			$('audio').on('ended',function()
-			{
-				toggleClass();
-			})
+									
+						var Playingnumber = 0  ;
+						var shuffle=0;
+						var equal = 0;
+
+
+
+
+						function changeSong() 
+						{
+						var music =  songs[Playingnumber].fileName;
+						var song = document.querySelector("audio");
+						song.src = music;
+						toggleSong();
+						changeCurrentSongDetails(songs[Playingnumber])
+						}
+
+
+
+
+
+
+						$(".fa-step-forward").click(function(){
+
+						if(shuffle==1)
+						{
+						var audio = document.querySelector('audio');
+						var nextSongNumber = randomExcluded(0,8,Playingnumber); // Calling our function from Stackoverflow
+
+						var nextSongObj = songs[nextSongNumber];
+						audio.src = nextSongobj.fileName;
+						toggleSong();
+						changeCurrentSongDetails(nextSongobj);
+						Playingnumber = nextSongNumber;
+
+
+						}
+
+
+						else {
+
+						if(Playingnumber == songs.length-1){
+						Playingnumber = 0;
+						changeSong();
+						}
+
+						else {
+						console.log("two");
+						console.log(Playingnumber);
+						Playingnumber++;
+						changeSong();
+						}
+
+						}
+
+						})
+
+
+
+
+						$(".fa-step-backward").click(function(){
+
+						if(Playingnumber == 0){
+						console.log("one");
+						Playingnumber = (songs.length-1);
+						changeSong();
+
+
+
+
+						}
+
+						else {
+						console.log("two");
+						console.log(Playingnumber);
+						Playingnumber--;
+						changeSong();
+						}
+
+
+
+
+						})
 			
 			
 			

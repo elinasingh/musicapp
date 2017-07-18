@@ -50,7 +50,8 @@ body {
     background-color: #B5E2F1;
     }
 	
-@keyframes pulse_animation{
+@keyframes pulse_animation
+    {
 		0%{transform:scale(1.1);}
 		50%{transform:scale(1.1);}
 		100%{transform:scale(1);}
