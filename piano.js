@@ -439,7 +439,9 @@
 		   $('body').on('keyup',function(event){
 			       $('.keys').removeClass('hover')
 		   });
-
+             $('body').on('keyup',function(event){
+			       $('.black keys').removeClass('hover')
+		   });
 					   
 						   
 	   
