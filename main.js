@@ -9,12 +9,12 @@
 				    'image': 'alone.jpg'
 				},
 				{
-					'name': 'Choo Lo',
-					'artist': 'The Local Train',
-					'album': 'Alas Ka Pedh',
-					'duration': '4:13',
-					'fileName': 'song2.mp3',
-					'image': 'choolo.jpg'
+					'name': 'Bhyanak Atma',
+					'artist': 'Nuclea',
+					'album': 'Raja Baja',
+					'duration': '3:29',
+					'fileName': 'song5.mp3',
+					'image': 'nuclea.jpg'
 				},
 				{
 					'name': 'Cheap Thrills',
@@ -25,28 +25,12 @@
 					'image': 'cheap.jpg'
 				},
 				{
-					'name': 'Summer',
-					'artist': 'Marshmello',
-					'album': 'Joytime',
-					'duration': '3:53',
-					'fileName': 'song4.mp3',
-					'image': 'summer.jpg'
-				},
-				{
-					'name': 'Bhyanak Atma',
-					'artist': 'Nuclea',
-					'album': 'Raja Baja',
-					'duration': '3:29',
-					'fileName': 'song5.mp3',
-					'image': 'nuclea.jpg'
-				},
-				{
-					'name': 'Let Me Love You',
-					'artist': 'DJ Snake Ft Justin Bieber',
-					'album': 'Let Me Love You',
-					'duration': '3:26',
-					'fileName': 'song6.mp3',
-					'image': 'love.jpg'
+					'name': 'Choo Lo',
+					'artist': 'The Local Train',
+					'album': 'Alas Ka Pedh',
+					'duration': '4:13',
+					'fileName': 'song2.mp3',
+					'image': 'choolo.jpg'
 				},
 				{
 					'name': 'Closer',
@@ -55,6 +39,24 @@
 					'duration': '4:21',
 					'fileName': 'song7.mp3',
 					'image': 'closer.jpg'
+				},
+				
+				{
+					'name': 'Let Me Love You',
+					'artist': 'DJ Snake Ft Justin Bieber',
+					'album': 'Let Me Love You',
+					'duration': '3:26',
+					'fileName': 'song6.mp3',
+					'image': 'love.jpg'
+				},
+				
+				{
+					'name': 'Summer',
+					'artist': 'Marshmello',
+					'album': 'Joytime',
+					'duration': '3:53',
+					'fileName': 'song4.mp3',
+					'image': 'summer.jpg'
 				}]
 
 
@@ -147,6 +149,7 @@
 			 var songName = songObj.fileName; // New Variable 
 			var id = '#song' + position;
 			$(id).click(function() {
+		    Playingnumber = position-1;
 			var audio = document.querySelector('audio');
 			var currentSong = audio.src;
 			if(currentSong.search(songName) != -1) 
@@ -190,9 +193,9 @@
 						var nextSongNumber = randomExcluded(0,8,Playingnumber); // Calling our function from Stackoverflow
 
 						var nextSongObj = songs[nextSongNumber];
-						audio.src = nextSongobj.fileName;
+						audio.src = nextSongObj.fileName;
 						toggleSong();
-						changeCurrentSongDetails(nextSongobj);
+						changeCurrentSongDetails(nextSongObj);
 						Playingnumber = nextSongNumber;
 
 
