@@ -59,11 +59,15 @@
 					'image': 'summer.jpg'
 				}]
 
-
+                var Playingnumber = 0;
 				var currentSongNumber = 1;
 				var willLoop = 0;
 				var willShuffle = 0;
 				var willmute=1;
+				var barsize =700;
+				
+				
+				
 				function mute()
 				{
 					var song = document.querySelector('audio');
@@ -374,6 +378,28 @@
 					toggleSong();
 				}
 		    });
+			
+			
+			$('.player-progress').on('click', function(e) {
+				//console.log(e.pageX);
+				 
+				 var song=document.querySelector('audio');
+				   if (!song.ended){
+					   var mouseX =e.pageX -bar.offsetLeft;
+					   //console.log(mouseX);
+					   var newtime =(mouseX*song.duration)/barsize;
+					   //console.log(newtime);
+					   song.currentTime =newtime;
+					   
+					   var ct= song.currentTime;
+					   var dt = song.duration;
+					   var percentage=(ct/dt)*100;
+					   $('.progress-filled').css('width',percentage+"%")
+				   }
+				   
+				
+			});
+				
 			
 						
 							
